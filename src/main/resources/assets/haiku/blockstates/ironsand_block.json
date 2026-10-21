@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "haiku:block/ironsand_block"
+    }
+  }
+}

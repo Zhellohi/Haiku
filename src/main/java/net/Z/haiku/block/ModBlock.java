@@ -36,6 +36,9 @@ public class ModBlock {
     public static final RegistryObject<Block> TAMAHAGANE_BLOCK = registerBlock("tamahagane_block",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
                     .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.DEEPSLATE)));
+    public static final RegistryObject<Block> IRONSAND_BLOCK = registerBlock("ironsand_block",
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+                    .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.SAND)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

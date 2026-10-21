@@ -26,6 +26,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlock.SATETSU_DEPOSIT.get());
                         output.accept(ModBlock.RIVER_SATETSU_DEPOSIT.get());
                         output.accept(ModBlock.PURE_SATETSU_DEPOSIT.get());
+                        output.accept(ModBlock.IRONSAND_BLOCK.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {
