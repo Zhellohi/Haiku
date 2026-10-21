@@ -2,6 +2,7 @@ package net.Z.haiku;
 
 import com.mojang.logging.LogUtils;
 import net.Z.haiku.block.ModBlock;
+import net.Z.haiku.item.ModCreativeModeTabs;
 import net.Z.haiku.item.ModItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -26,11 +27,10 @@ import org.slf4j.Logger;
     public HaikuMod(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItem.register(modEventBus);
         ModBlock.register(modEventBus);
-
-
 
 
         modEventBus.addListener(this::commonSetup);

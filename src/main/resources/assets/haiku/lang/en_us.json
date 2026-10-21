@@ -6,5 +6,7 @@
   "block.haiku.tamahagane_block": "Tamahagane Block",
   "block.haiku.satetsu_deposit": "Satetsu Deposit",
   "block.haiku.river_satetsu_deposit": "River Satetsu Deposit",
-  "block.haiku.pure_satetsu_deposit": "Pure Satetsu Deposit"
+  "block.haiku.pure_satetsu_deposit": "Pure Satetsu Deposit",
+
+  "creativetab.haiku": "Haiku"
 }
