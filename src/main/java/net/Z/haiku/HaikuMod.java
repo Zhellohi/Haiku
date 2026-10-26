@@ -1,9 +1,9 @@
 package net.Z.haiku;
 
 import com.mojang.logging.LogUtils;
-import net.Z.haiku.block.ModBlock;
+import net.Z.haiku.block.ModBlocks;
 import net.Z.haiku.item.ModCreativeModeTabs;
-import net.Z.haiku.item.ModItem;
+import net.Z.haiku.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -29,8 +29,8 @@ import org.slf4j.Logger;
 
         ModCreativeModeTabs.register(modEventBus);
 
-        ModItem.register(modEventBus);
-        ModBlock.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);
@@ -49,16 +49,16 @@ import org.slf4j.Logger;
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItem.IRONSAND);
-            event.accept(ModItem.REFINED_IRON);
-            event.accept(ModItem.TAMAHAGANE_INGOT);
+            event.accept(ModItems.IRONSAND);
+            event.accept(ModItems.REFINED_IRON);
+            event.accept(ModItems.TAMAHAGANE_INGOT);
         }
 
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
-            event.accept(ModBlock.SATETSU_DEPOSIT);
-            event.accept(ModBlock.RIVER_SATETSU_DEPOSIT);
-            event.accept(ModBlock.PURE_SATETSU_DEPOSIT);
-            event.accept(ModBlock.TAMAHAGANE_BLOCK);
+            event.accept(ModBlocks.SATETSU_DEPOSIT);
+            event.accept(ModBlocks.RIVER_SATETSU_DEPOSIT);
+            event.accept(ModBlocks.PURE_SATETSU_DEPOSIT);
+            event.accept(ModBlocks.TAMAHAGANE_BLOCK);
         }
 
     }

@@ -2,15 +2,12 @@ package net.Z.haiku.item;
 
 import net.Z.haiku.HaikuMod;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static net.minecraftforge.registries.ForgeRegistries.Keys.ITEMS;
-
-public class ModItem {
+public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, HaikuMod.MOD_ID);
 
@@ -26,4 +23,4 @@ public class ModItem {
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
-  }
+}
