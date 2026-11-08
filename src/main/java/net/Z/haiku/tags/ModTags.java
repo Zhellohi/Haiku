@@ -22,6 +22,7 @@ public class ModTags {
 
     public static class Blocks {
         public static final TagKey<Block> HAIKU_METALLURGY = tag("haiku_metallurgy");
+        public static final TagKey<Block> TAMAHAGANE = tag("tamahagane");
 
 
         private static TagKey<Block> tag(String name) {

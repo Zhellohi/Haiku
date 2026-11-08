@@ -1,7 +1,8 @@
-package net.Z.haiku.item;
+package net.Z.haiku.item.custom;
 
 import net.Z.haiku.HaikuMod;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -17,6 +18,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TAMAHAGANE_INGOT = ITEMS.register("tamahagane_ingot",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> KATANA = ITEMS.register("katana",
+            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 2, 3, new Item.Properties().durability(600)));
+
 
 
 

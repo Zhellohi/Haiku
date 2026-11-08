@@ -2,10 +2,11 @@ package net.Z.haiku.datagen;
 
 import net.Z.haiku.HaikuMod;
 import net.Z.haiku.block.ModBlocks;
-import net.Z.haiku.item.ModItems;
+import net.Z.haiku.item.custom.ModItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -43,7 +44,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.TAMAHAGANE_INGOT.get(), RecipeCategory.MISC, ModBlocks.TAMAHAGANE_BLOCK.get(),
                 "haiku:tamahagane_ingot", "tamahagane_ingot", "haiku:tamahagane_block", "tamahagane_ingot");
 
-        oreSmelting(pWriter, METALLURGY_SMELTABLES, RecipeCategory.MISC, ModItems.REFINED_IRON.get(), 0.25f, 200, "refined_iron");
+        oreSmelting(pWriter, METALLURGY_SMELTABLES, RecipeCategory.MISC, ModItems.TAMAHAGANE_INGOT.get(), 0.25f, 200, "tamahagane_block");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.KATANA.get())
+                .pattern("  T")
+                .pattern("GT ")
+                .pattern("SG ")
+                .define('T', ModItems.TAMAHAGANE_INGOT.get())
+                .define('G', Items.GOLD_NUGGET)
+                .define('S', Items.STICK)
+                .unlockedBy("has_tamahagane_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.KATANA.get()).build()))
+                .save(pWriter);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

@@ -1,4 +1,4 @@
-package net.Z.haiku.item;
+package net.Z.haiku.item.custom;
 
 import net.Z.haiku.HaikuMod;
 import net.Z.haiku.block.ModBlocks;
@@ -27,6 +27,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RIVER_SATETSU_DEPOSIT.get());
                         output.accept(ModBlocks.PURE_SATETSU_DEPOSIT.get());
                         output.accept(ModBlocks.IRONSAND_BLOCK.get());
+
+                        output.accept(ModItems.KATANA.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {

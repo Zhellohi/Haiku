@@ -2,8 +2,8 @@ package net.Z.haiku;
 
 import com.mojang.logging.LogUtils;
 import net.Z.haiku.block.ModBlocks;
-import net.Z.haiku.item.ModCreativeModeTabs;
-import net.Z.haiku.item.ModItems;
+import net.Z.haiku.item.custom.ModCreativeModeTabs;
+import net.Z.haiku.item.custom.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;

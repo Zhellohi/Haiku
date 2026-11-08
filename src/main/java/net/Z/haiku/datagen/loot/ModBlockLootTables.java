@@ -1,7 +1,7 @@
 package net.Z.haiku.datagen.loot;
 
 import net.Z.haiku.block.ModBlocks;
-import net.Z.haiku.item.ModItems;
+import net.Z.haiku.item.custom.ModItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;

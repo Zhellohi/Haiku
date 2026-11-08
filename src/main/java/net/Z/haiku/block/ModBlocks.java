@@ -1,7 +1,7 @@
 package net.Z.haiku.block;
 
 import net.Z.haiku.HaikuMod;
-import net.Z.haiku.item.ModItems;
+import net.Z.haiku.item.custom.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
