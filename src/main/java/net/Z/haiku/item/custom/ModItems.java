@@ -16,11 +16,15 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> REFINED_IRON = ITEMS.register("refined_iron",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> REFINED_IRON_NUGGET = ITEMS.register("refined_iron_nugget",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TAMAHAGANE_INGOT = ITEMS.register("tamahagane_ingot",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> KATANA = ITEMS.register("katana",
             () -> new SwordItem(ModToolTiers.TAMAHAGANE, 2, 3, new Item.Properties().durability(600)));
+    public static final RegistryObject<Item> GOLDEN_KATANA = ITEMS.register("golden_katana",
+            () -> new SwordItem(ModToolTiers.TAMAHAGANE, 2, 3, new Item.Properties().durability(800)));
 
 
 

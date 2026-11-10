@@ -19,6 +19,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.IRONSAND.getId());
         basicItem(ModItems.TAMAHAGANE_INGOT.getId());
         basicItem(ModItems.REFINED_IRON.getId());
+        basicItem(ModItems.REFINED_IRON_NUGGET.getId());
 
       //  handheldItem(ModItems.KATANA.getId());
 

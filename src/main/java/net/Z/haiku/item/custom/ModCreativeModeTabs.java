@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TAMAHAGANE_INGOT.get());
                         output.accept(ModItems.IRONSAND.get());
                         output.accept(ModItems.REFINED_IRON.get());
+                        output.accept(ModItems.REFINED_IRON_NUGGET.get());
 
                         output.accept(ModBlocks.TAMAHAGANE_BLOCK.get());
                         output.accept(ModBlocks.SATETSU_DEPOSIT.get());
@@ -29,6 +30,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.IRONSAND_BLOCK.get());
 
                         output.accept(ModItems.KATANA.get());
+                        output.accept(ModItems.GOLDEN_KATANA.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {

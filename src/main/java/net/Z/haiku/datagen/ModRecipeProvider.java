@@ -41,6 +41,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModBlocks.IRONSAND_BLOCK.get()).build()))
                 .save(pWriter);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.REFINED_IRON_NUGGET.get(), 4)
+                        .requires(ModItems.REFINED_IRON.get())
+                                .unlockedBy("has_refined_iron", inventoryTrigger(ItemPredicate.Builder.item().
+                                        of(ModItems.REFINED_IRON.get()).build()))
+                                        .save(pWriter);
+
         nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.TAMAHAGANE_INGOT.get(), RecipeCategory.MISC, ModBlocks.TAMAHAGANE_BLOCK.get(),
                 "haiku:tamahagane_ingot", "tamahagane_ingot", "haiku:tamahagane_block", "tamahagane_ingot");
 
@@ -48,13 +54,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.KATANA.get())
                 .pattern("  T")
-                .pattern("GT ")
-                .pattern("SG ")
+                .pattern("RT ")
+                .pattern("SR ")
                 .define('T', ModItems.TAMAHAGANE_INGOT.get())
-                .define('G', Items.GOLD_NUGGET)
+                .define('R', ModItems.REFINED_IRON_NUGGET.get())
                 .define('S', Items.STICK)
                 .unlockedBy("has_tamahagane_ingot", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModItems.KATANA.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.GOLDEN_KATANA.get())
+                .pattern("  T")
+                .pattern("GT ")
+                .pattern("SG ")
+                .define('T', ModItems.TAMAHAGANE_INGOT.get())
+                .define('G', Items.GOLD_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_tamahagane_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.GOLDEN_KATANA.get()).build()))
                 .save(pWriter);
     }
 

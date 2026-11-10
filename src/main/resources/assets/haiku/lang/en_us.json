@@ -2,7 +2,11 @@
   "item.haiku.tamahagane_ingot": "Tamahagane Ingot",
   "item.haiku.refined_iron": "Refined Iron",
   "item.haiku.ironsand": "Ironsand",
+  "item.haiku.refined_iron_nugget": "Refined Iron Nugget",
+
   "item.haiku.katana": "Katana",
+  "item.haiku.golden_katana": "Golden Katana",
+
 
   "block.haiku.tamahagane_block": "Tamahagane Block",
   "block.haiku.satetsu_deposit": "Satetsu Deposit",
